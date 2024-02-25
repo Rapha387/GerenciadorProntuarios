@@ -1,0 +1,46 @@
+.main {
+  margin-top: 80px;
+  margin: auto;
+  width: 800px;
+}
+
+.form{
+  margin: auto;
+  margin-top: 50px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form input{
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+}
+
+fieldset{
+  width: 100%;
+  padding: 20px;
+  border: solid thin var(--primary-color);
+  border-radius: 5px;
+}
+
+fieldset legend{
+  color: var(--primary-color)
+}
+
+.registro{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 200px;
+}
+
+input[type=submit]{
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}

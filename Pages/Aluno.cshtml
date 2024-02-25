@@ -1,0 +1,126 @@
+﻿@page "{id}"
+@model MyApp.Namespace.AlunoModel
+@{
+  ViewData["Title"] = "Aluno";
+}
+
+
+<h3>Editar Informações</h3>
+              <form method="post" class="editar-infos">
+                  <div class="infos">
+                      <div class="inputs-infos">
+                        <label asp-for="Aluno.Nome">Nome:</label><br />
+                        <input asp-for="Aluno.Nome" name="nomeAluno" type="text" ID="txtNome" class="txtInfos form-control" />
+                      </div>
+                      <div class="inputs-infos">
+                        <label asp-for="Aluno.CPF">CPF:</label><br />
+                        <input asp-for="Aluno.CPF" name="cpfAluno" type="text" ID="txtRG" class="txtInfos form-control" />
+                      </div>
+                      <div class="inputs-infos">
+                        <label asp-for="Aluno.RG" >RG:</label><br />
+                        <input asp-for="Aluno.RG" name="rgAluno" type="text" ID="txtCPF" class="txtInfos form-control" />
+                      </div>
+                  </div>
+                  
+                  <div class="salvar">
+                      <input type="submit" class="button-salvar" Value="Salvar Informações">
+                  </div>
+              </form> 
+
+              <h3>Documentos</h3>
+
+                <table class="table table-striped table-bordered" ID="tblDocumentos">
+                  <thead>
+                    <tr>
+                      <th>Documento</th>
+                      <th>Entregue</th>
+                      <th></th>
+                    </tr>
+
+                    <tbody>
+                      @foreach(var documento in Model.DocumentosAluno)
+                      {
+                        <tr>
+                          <td>@documento.NomeDocumento</td>
+                          <td>@(documento.Consta ? "Entregue" : "Pendente")</td>
+                          <td><input type="checkbox" @(documento.Consta ? "checked" : "") /></td>
+                        </tr>
+                      }
+                    </tbody>
+
+                  </thead>
+                </table>
+              <div class="salvar">
+                  <input type="submit" ID="btnSalvarDocumentos" class="button-salvar" Value="Salvar Documentos"/>
+              </div>
+
+                <!--
+
+              <h3>Curso</h3>
+              <asp:DropDownList ID="cmbCursos" CssClass="cmbCursos" runat="server" AutoPostBack="true" OnSelectedIndexChanged="cmbCursos_SelectedIndexChanged">
+                  <asp:ListItem Value="" Text="SELECIONE UMA OPÇÂO" Disabled="True" Selected="True"></asp:ListItem>   
+              </asp:DropDownList>
+
+              <asp:Panel ID="pnlDiploma" Visible="false" runat="server">
+                  <asp:Label ID="lblCursoDiploma" runat="server"></asp:Label>
+                  <asp:GridView ID="tblDiploma" runat="server" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:BoundField DataField="cd_diploma" HeaderText="C&#243;digo"></asp:BoundField>
+                        <asp:BoundField DataField="cd_tipo_diploma" HeaderText="Tipo do Diploma"></asp:BoundField>
+                        <asp:BoundField DataField="cd_livro" HeaderText="Livro"></asp:BoundField>
+                        <asp:BoundField DataField="cd_pagina" HeaderText="P&#225;gina"></asp:BoundField>
+                        <asp:BoundField HeaderText="Emiss&#227;o" DataField="dt_emissao"></asp:BoundField>
+                        <asp:BoundField DataField="dt_retirada" HeaderText="Retirada"></asp:BoundField>
+                        <asp:BoundField DataField="ic_segundavia" HeaderText="Segunda Via"></asp:BoundField>
+                        <asp:HyperLinkField DataNavigateUrlFields="cd_rm_aluno,cd_curso,cd_diploma" DataNavigateUrlFormatString="aluno.aspx?rm={0}&c={1}&d={2}" HeaderText="Ação" Text="Retirar" />
+                    </Columns>
+                  </asp:GridView>
+                  <div class="salvar">
+                      <asp:Button ID="btnNovoDiploma" runat="server" CssClass="button-salvar" Text="Novo Diploma" OnClick="btnNovoDiploma_Click"/>
+                  </div>
+              </asp:Panel>
+
+                <asp:Panel ID="pnlNovoDiploma" CssClass="AdicionarDiploma" Visible="false" runat="server">
+                    <h3>Novo Diploma</h3>
+                    <div class="novoDiploma">
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Código do Diploma:</label><br />
+                            <asp:TextBox ID="txtCodigoDiploma" CssClass="infos-novoDiploma" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Tipo do Diploma:</label><br />
+                            <asp:DropDownList ID="cmbTipoDiploma" CssClass="infos-novoDiploma" runat="server"></asp:DropDownList>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Segunda Via:</label><br />
+                            <asp:DropDownList ID="cmbSegundaVia" CssClass="infos-novoDiploma" runat="server">
+                                <asp:ListItem Value="0">Não</asp:ListItem>
+                                <asp:ListItem Value="1">Sim</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Livro:</label><br />
+                            <asp:TextBox ID="txtLivro" CssClass="infos-novoDiploma" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Página:</label><br />
+                            <asp:TextBox ID="txtPagina" CssClass="infos-novoDiploma" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Data de Conclusão:</label><br />
+                            <asp:TextBox ID="txtDtConclusao" CssClass="infos-novoDiploma" TextMode="Date" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="inputs-infos-novoDiploma">
+                            <label>Data de Emissão:</label><br />
+                            <asp:TextBox ID="txtDtEmissao" CssClass="infos-novoDiploma" TextMode="Date" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="salvar">
+                            <span><asp:Label ID="lblMsgErro" runat="server"></asp:Label></span>
+                            <div>
+                                 <asp:Button ID="btnCadastrarDiploma" CssClass="button-salvar" runat="server" Text="Cadastrar Diploma" OnClick="btnCadastrarDiploma_Click"/>
+                                 <asp:Button ID="btnCancelarCadastroDiploma" CssClass="button-salvar" runat="server" Text="Cancelar" OnClick="btnCancelarCadastroDiploma_Click" />
+                            </div>
+                           
+                        </div>
+                    </div>
+                </asp:Panel>

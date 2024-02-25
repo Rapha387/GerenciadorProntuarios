@@ -1,0 +1,151 @@
+.main {
+  margin: auto;
+  margin-top: 30px !important;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3{
+  font-size: 20px;
+  margin-top: 30px;
+  color:var(--primary-color)
+}
+
+.infos{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs-infos{
+  width: 33%;
+}
+
+.txtInfos {
+  width:100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+}
+
+.txtInfos {
+  outline: 0;
+  border: solid 1px var(--primary-color);
+}
+
+.salvar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button-salvar {
+  margin-left: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  cursor: pointer;
+}
+
+table {
+width: 100%;
+background-color: var(--primary-color);
+border-radius: 5px;
+margin-bottom: 10px;
+margin-top:10px;
+}
+
+table a{
+  color: #000;
+}
+
+td {
+text-align: center;
+padding: 6px;
+}
+
+th{
+text-align: center;
+color: #fff;
+background-color: var(--primary-color);
+padding: 4px;
+}
+
+tr{
+background-color: #fff;
+}
+
+.pintar-linha {
+background-color: #ffe8e8;
+}
+
+.entregue{
+background-color: #ccffbf;
+}
+
+.nao-entregue{
+background-color:#ffe8e8;
+}
+
+.esconder{
+  display: none;
+}
+
+.cmbCursos {
+  padding: 8px;
+  text-transform: uppercase;
+  outline: none;
+  border: solid thin var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cmbCursos option:first-child{
+  color: #fff;
+  background-color: #cacaca;
+}
+
+.AdicionarDiploma{
+  border-radius: 5px;
+  border:solid thin var(--primary-color);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.novoDiploma {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.novoDiploma .salvar{
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+
+.novoDiploma .salvar span{
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.inputs-infos-novoDiploma {
+  width: 32%;
+}
+
+.infos-novoDiploma {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  outline: 0;
+}

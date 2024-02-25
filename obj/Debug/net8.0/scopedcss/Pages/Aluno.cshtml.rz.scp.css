@@ -1,0 +1,151 @@
+.main[b-93k464uetp] {
+  margin: auto;
+  margin-top: 30px !important;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3[b-93k464uetp]{
+  font-size: 20px;
+  margin-top: 30px;
+  color:var(--primary-color)
+}
+
+.infos[b-93k464uetp]{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputs-infos[b-93k464uetp]{
+  width: 33%;
+}
+
+.txtInfos[b-93k464uetp] {
+  width:100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+}
+
+.txtInfos[b-93k464uetp] {
+  outline: 0;
+  border: solid 1px var(--primary-color);
+}
+
+.salvar[b-93k464uetp] {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button-salvar[b-93k464uetp] {
+  margin-left: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  cursor: pointer;
+}
+
+table[b-93k464uetp] {
+width: 100%;
+background-color: var(--primary-color);
+border-radius: 5px;
+margin-bottom: 10px;
+margin-top:10px;
+}
+
+table a[b-93k464uetp]{
+  color: #000;
+}
+
+td[b-93k464uetp] {
+text-align: center;
+padding: 6px;
+}
+
+th[b-93k464uetp]{
+text-align: center;
+color: #fff;
+background-color: var(--primary-color);
+padding: 4px;
+}
+
+tr[b-93k464uetp]{
+background-color: #fff;
+}
+
+.pintar-linha[b-93k464uetp] {
+background-color: #ffe8e8;
+}
+
+.entregue[b-93k464uetp]{
+background-color: #ccffbf;
+}
+
+.nao-entregue[b-93k464uetp]{
+background-color:#ffe8e8;
+}
+
+.esconder[b-93k464uetp]{
+  display: none;
+}
+
+.cmbCursos[b-93k464uetp] {
+  padding: 8px;
+  text-transform: uppercase;
+  outline: none;
+  border: solid thin var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cmbCursos option:first-child[b-93k464uetp]{
+  color: #fff;
+  background-color: #cacaca;
+}
+
+.AdicionarDiploma[b-93k464uetp]{
+  border-radius: 5px;
+  border:solid thin var(--primary-color);
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.novoDiploma[b-93k464uetp] {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.novoDiploma .salvar[b-93k464uetp]{
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+
+.novoDiploma .salvar span[b-93k464uetp]{
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.inputs-infos-novoDiploma[b-93k464uetp] {
+  width: 32%;
+}
+
+.infos-novoDiploma[b-93k464uetp] {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  outline: 0;
+}

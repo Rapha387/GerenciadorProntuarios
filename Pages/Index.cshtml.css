@@ -1,0 +1,75 @@
+.main {
+  margin: auto;
+  width: 800px;
+}
+
+.buscar-aluno {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.search-aluno {
+    width: 89%;
+    padding: 6px;
+    border-radius: 5px;
+    border: solid 1px var(--primary-color);
+}
+
+.buscar-aluno input,select:focus{
+  outline: 0;
+  border: solid 1px var(--primary-color);
+}
+
+.botao-buscar {
+  width: 10%;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  margin-bottom: 30px
+}
+
+table a{
+    color: #000;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+tr {
+  background-color: #fff;
+  transition: 0.05s;
+}
+
+
+td {
+  text-align: center;
+  padding: 6px;
+}
+
+.pintar-linha {
+  background-color: #ffe8e8;
+}
+
+h3{
+  font-size: 20px;
+  color:var(--primary-color)
+}
+
+.entregue{
+  background-color: #ccffbf;
+}

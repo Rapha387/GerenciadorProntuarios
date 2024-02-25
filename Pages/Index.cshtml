@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <form method="get" class="buscar-aluno">
+        <input type="text" name="nomeAluno" ID="txtBuscarAluno" class="search-aluno" placeholder="Buscar..." />
+        <input type="submit" ID="btnBuscar" class="botao-buscar" value="Buscar" />
+    </form>
+
+    <table class="table table-striped " ID="tblResultados">
+        <thead>
+            <tr>
+                <th scope="col">RM</th>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col">RG</th>
+            </tr>
+        <thead>
+            <tbody>
+                @foreach(var aluno in Model.Alunos)
+                {
+                    <tr>
+                        <td>@aluno.Nome</td>
+                        <td>@aluno.RG</td>
+                        <td>@aluno.CPF</td>
+                        <td>@aluno.RG</td>
+                        <td><a asp-page="/Aluno" asp-route-id=@aluno.Id>Ver Mais</a></td>
+                    </tr>
+                }
+            </tbody>
+    </table>
+    @Model.Nome
+</div>

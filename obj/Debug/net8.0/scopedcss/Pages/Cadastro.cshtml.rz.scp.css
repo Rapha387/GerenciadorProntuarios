@@ -1,0 +1,46 @@
+.main[b-e5a79elw8y] {
+  margin-top: 80px;
+  margin: auto;
+  width: 800px;
+}
+
+.form[b-e5a79elw8y]{
+  margin: auto;
+  margin-top: 50px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form input[b-e5a79elw8y]{
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+}
+
+fieldset[b-e5a79elw8y]{
+  width: 100%;
+  padding: 20px;
+  border: solid thin var(--primary-color);
+  border-radius: 5px;
+}
+
+fieldset legend[b-e5a79elw8y]{
+  color: var(--primary-color)
+}
+
+.registro[b-e5a79elw8y]{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 200px;
+}
+
+input[type=submit][b-e5a79elw8y]{
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}

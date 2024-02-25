@@ -1,0 +1,30 @@
+﻿@page
+@model MyApp.Namespace.CadastroModel
+@{
+  ViewData["Title"] = "Cadastro";
+}
+<form method="POST">
+    <fieldset class="form">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <legend>Cadastro</legend>
+        <div class="registro">
+            <label asp-for="Aluno.Nome">Nome:</label>
+            <input asp-for="Aluno.Nome" type="text" class="form-control" />
+            <span asp-validation-for="Aluno.Nome" class="text-danger"></span><br>
+
+            <label asp-for="Aluno.RG">RG:</label>
+            <input asp-for="Aluno.RG" MaxLength="9" class="form-control" type="number" />
+            <span asp-validation-for="Aluno.RG" class="text-danger"></span><br>
+
+            <label asp-for="Aluno.CPF">CPF:</label>
+            <input asp-for="Aluno.CPF" MaxLength="11" class="form-control" type="number" />
+            <span asp-validation-for="Aluno.CPF" class="text-danger"></span><br>
+
+            <input type="submit">
+        </div>
+    </fieldset>
+</form>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+} 
