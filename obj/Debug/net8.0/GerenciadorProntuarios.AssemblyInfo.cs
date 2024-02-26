@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciadorProntuarios")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+607bedb267c866592b07a19236640e2eb747332f")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciadorProntuarios")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciadorProntuarios")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
